@@ -21,4 +21,7 @@ func _process(_delta):
 	
 	character.set_velocity_direction(direction.normalized())
 	
+	if Input.is_action_just_pressed("interact"):
+		character.interact()
+		
 
