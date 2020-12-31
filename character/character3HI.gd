@@ -1,5 +1,5 @@
-extends Node
-
+extends Node2D
+# Human Intelligence
 var character
 
 func _ready():
@@ -23,5 +23,6 @@ func _process(_delta):
 	
 	if Input.is_action_just_pressed("interact"):
 		character.interact()
-		
-
+	
+	if Input.is_action_just_pressed("shoot"):
+		character.shoot(get_global_mouse_position() - character.get_global_position())

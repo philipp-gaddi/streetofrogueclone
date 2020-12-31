@@ -268,7 +268,7 @@ graph_offset = Vector2( -141.174, 0 )
 [sub_resource type="AnimationNodeStateMachinePlayback" id=23]
 
 [sub_resource type="CircleShape2D" id=24]
-radius = 25.0004
+radius = 13.4293
 
 [node name="Character" type="KinematicBody2D"]
 collision_mask = 0

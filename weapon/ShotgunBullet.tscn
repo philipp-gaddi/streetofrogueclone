@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://shotgun.wav" type="AudioStream" id=1]
+[ext_resource path="res://weapon/ShotgunBullet.gd" type="Script" id=2]
+
+[node name="ShotgunBullet" type="RigidBody2D"]
+collision_layer = 8
+collision_mask = 2147483655
+script = ExtResource( 2 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+polygon = PoolVector2Array( -10.5, -9.5, -10.5, 7.75, 9.75, 7.75, 17.75, 2.5, 18, -3.75, 11.25, -9.25 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -15, -6.25, -15.25, 5.5, 22, 0.5 )
+
+[node name="Lifetimer" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+autoplay = true
+[connection signal="timeout" from="Lifetimer" to="." method="_on_Timer_timeout"]
