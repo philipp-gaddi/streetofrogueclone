@@ -278,7 +278,7 @@ script = ExtResource( 1 )
 texture = ExtResource( 3 )
 vframes = 3
 hframes = 4
-frame = 1
+frame = 3
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 3 )
@@ -294,9 +294,6 @@ anims/walk_left = SubResource( 7 )
 anims/walk_right = SubResource( 8 )
 anims/walk_up = SubResource( 9 )
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 2 )
-
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 22 )
 anim_player = NodePath("../AnimationPlayer")
@@ -304,6 +301,9 @@ active = true
 parameters/playback = SubResource( 23 )
 parameters/idle/blend_position = Vector2( 0, 0 )
 parameters/walk/blend_position = Vector2( 0, 0 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
 
 [node name="Interaktionradius" type="Area2D" parent="."]
 

@@ -9,6 +9,7 @@ func _ready():
 
 
 func _process(_delta):
+
 	var direction = Vector2()
 	if Input.is_action_pressed("move_left"):
 		direction.x -= 1
@@ -20,7 +21,7 @@ func _process(_delta):
 		direction.y += 1
 	
 	character.set_velocity_direction(direction.normalized())
-	
+
 	if Input.is_action_just_pressed("interact"):
 		character.interact()
 	
